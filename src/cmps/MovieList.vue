@@ -1,7 +1,7 @@
 <template>
     <ul class="movie-list">
         <li v-for="movie in movies" :key="movie._id">
-            <MoviePreview :movie="movie" />
+            <MoviePreview :movie="movie" @remove="$emit('remove', $event)" />
         </li>
     </ul>
 </template>

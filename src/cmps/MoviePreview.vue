@@ -26,11 +26,10 @@ export default {
     },
     methods: {
         handleImageError(e) {
-            // תמונת גיבוי אם ה-URL שבור
             e.target.src = defaultImg
         },
         onRemove() {
-            // נשלח אירוע לאב (נצטרך לטפל בזה בהמשך)
+            console.log('Removing movie with ID:', this.movie._id);
             this.$emit('remove', this.movie._id)
         },
         onDetails() {
@@ -41,7 +40,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .movie-preview {
     border: 1px solid #ccc;
     border-radius: 8px;
