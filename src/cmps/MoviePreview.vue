@@ -1,0 +1,93 @@
+<template>
+    <article class="movie-preview">
+        <div class="img-container">
+            <img :src="movie.posterUrl" :alt="movie.title" @error="handleImageError" />
+        </div>
+        <div class="content">
+            <h3>{{ movie.title }}</h3>
+            <p class="year">Year: {{ movie.releaseYear }}</p>
+
+            <div class="actions">
+                <button @click="onDetails">Details</button>
+                <button @click="onRemove" class="danger">Delete</button>
+            </div>
+        </div>
+    </article>
+</template>
+
+<script>
+import defaultImg from '@/assets/images/default.png'
+export default {
+    props: {
+        movie: {
+            type: Object,
+            required: true
+        }
+    },
+    methods: {
+        handleImageError(e) {
+            // תמונת גיבוי אם ה-URL שבור
+            e.target.src = defaultImg
+        },
+        onRemove() {
+            // נשלח אירוע לאב (נצטרך לטפל בזה בהמשך)
+            this.$emit('remove', this.movie._id)
+        },
+        onDetails() {
+            // ניווט לפרטים (נצטרך לטפל בזה בהמשך)
+            this.$router.push(`/movie/${this.movie._id}`)
+        }
+    }
+}
+</script>
+
+<style>
+.movie-preview {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.movie-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.movie-preview:hover img {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 10px;
+    text-align: center;
+}
+
+.year {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+button.danger {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+}
+</style>
