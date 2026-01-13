@@ -3,21 +3,23 @@ export default [
         _id: 'm101',
         title: 'Inception',
         director: 'Christopher Nolan',
-        posterUrl: './assets/images/default.png',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg',
         runningTime: 148,
         releaseYear: 2010,
         actors: ['Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Elliot Page'],
         genre: 'Science Fiction',
+        plot: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.'
     },
     {
         _id: 'm102',
         title: 'The Grand Budapest Hotel',
         director: 'Wes Anderson',
-        posterUrl: 'https://image.tmdb.org/t/p/w500/nX5XotM9yprCKarRH4fzOq1VM1J.jpg',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg',
         runningTime: 99,
         releaseYear: 2014,
         actors: ['Ralph Fiennes', 'Tony Revolori', 'Saoirse Ronan'],
         genre: 'Comedy',
+        plot: 'A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel\'s glorious years under an exceptional concierge.'
     },
     {
         _id: 'm103',
@@ -28,16 +30,18 @@ export default [
         releaseYear: 2019,
         actors: ['Song Kang-ho', 'Lee Sun-kyun', 'Cho Yeo-jeong'],
         genre: 'Thriller',
+        plot: 'Ki-taek\'s family of four is close, but fully unemployed, with a bleak future ahead of them. The son Ki-woo is recommended for a well-paid tutoring job, spawning hopes for a steady income in the family.'
     },
     {
         _id: 'm104',
         title: 'Spirited Away',
         director: 'Hayao Miyazaki',
-        posterUrl: 'https://image.tmdb.org/t/p/w500/dL11DBPcRhWWnJcFXl9A07MrqTI.jpg',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyScPklSQFFdv2.jpg',
         runningTime: 125,
         releaseYear: 2001,
         actors: ['Rumi Hiiragi', 'Miyu Irino', 'Mari Natsuki'],
         genre: 'Animation',
+        plot: 'During her family\'s move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.'
     },
     {
         _id: 'm105',
@@ -48,5 +52,171 @@ export default [
         releaseYear: 2010,
         actors: ['Jesse Eisenberg', 'Andrew Garfield', 'Justin Timberlake'],
         genre: 'Drama',
+        plot: 'As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later squeezed out of the business.'
     },
+    {
+        _id: 'm106',
+        title: 'The Godfather',
+        director: 'Francis Ford Coppola',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg',
+        runningTime: 175,
+        releaseYear: 1972,
+        actors: ['Marlon Brando', 'Al Pacino', 'James Caan'],
+        genre: 'Crime',
+        plot: 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.'
+    },
+    {
+        _id: 'm107',
+        title: 'Pulp Fiction',
+        director: 'Quentin Tarantino',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg',
+        runningTime: 154,
+        releaseYear: 1994,
+        actors: ['John Travolta', 'Uma Thurman', 'Samuel L. Jackson'],
+        genre: 'Crime',
+        plot: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.'
+    },
+    {
+        _id: 'm108',
+        title: 'The Dark Knight',
+        director: 'Christopher Nolan',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/qJ2tW6WMUDuxXH71Y8PoPw4LSQH.jpg',
+        runningTime: 152,
+        releaseYear: 2008,
+        actors: ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart'],
+        genre: 'Action',
+        plot: 'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.'
+    },
+    {
+        _id: 'm109',
+        title: 'Schindlers List',
+        director: 'Steven Spielberg',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGOtFzek.jpg',
+        runningTime: 195,
+        releaseYear: 1993,
+        actors: ['Liam Neeson', 'Ralph Fiennes', 'Ben Kingsley'],
+        genre: 'Biography',
+        plot: 'In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.'
+    },
+    {
+        _id: 'm110',
+        title: 'Fight Club',
+        director: 'David Fincher',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg',
+        runningTime: 139,
+        releaseYear: 1999,
+        actors: ['Brad Pitt', 'Edward Norton', 'Meat Loaf'],
+        genre: 'Drama',
+        plot: 'An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.'
+    },
+    {
+        _id: 'm111',
+        title: 'Forrest Gump',
+        director: 'Robert Zemeckis',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxdWB3Izm45A.jpg',
+        runningTime: 142,
+        releaseYear: 1994,
+        actors: ['Tom Hanks', 'Robin Wright', 'Gary Sinise'],
+        genre: 'Drama',
+        plot: 'The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.'
+    },
+    {
+        _id: 'm112',
+        title: 'The Matrix',
+        director: 'Lana Wachowski',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpFUk5H.jpg',
+        runningTime: 136,
+        releaseYear: 1999,
+        actors: ['Keanu Reeves', 'Laurence Fishburne', 'Carrie-Anne Moss'],
+        genre: 'Action',
+        plot: 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.'
+    },
+    {
+        _id: 'm113',
+        title: 'Goodfellas',
+        director: 'Martin Scorsese',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg',
+        runningTime: 146,
+        releaseYear: 1990,
+        actors: ['Robert De Niro', 'Ray Liotta', 'Joe Pesci'],
+        genre: 'Biography',
+        plot: 'The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.'
+    },
+    {
+        _id: 'm114',
+        title: 'Interstellar',
+        director: 'Christopher Nolan',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/gEU2QniL6C8zXtFaXDXrAhjpqB4.jpg',
+        runningTime: 169,
+        releaseYear: 2014,
+        actors: ['Matthew McConaughey', 'Anne Hathaway', 'Jessica Chastain'],
+        genre: 'Adventure',
+        plot: 'A team of explorers travel through a wormhole in space in an attempt to ensure humanity\'s survival.'
+    },
+    {
+        _id: 'm115',
+        title: 'City of God',
+        director: 'Fernando Meirelles',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/k7eYdW7PrftUunJMAYsm52QjGw8.jpg',
+        runningTime: 130,
+        releaseYear: 2002,
+        actors: ['Alexandre Rodrigues', 'Leandro Firmino', 'Matheus Nachtergaele'],
+        genre: 'Crime',
+        plot: 'In the slums of Rio, two kids\' paths diverge as one struggles to become a photographer and the other a kingpin.'
+    },
+    {
+        _id: 'm116',
+        title: 'Seven Samurai',
+        director: 'Akira Kurosawa',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/8OKmBV5BUFzlpBIFJAIPCTGSIlW.jpg',
+        runningTime: 207,
+        releaseYear: 1954,
+        actors: ['Toshirô Mifune', 'Takashi Shimura', 'Keiko Tsushima'],
+        genre: 'Action',
+        plot: 'A poor village under attack by bandits recruits seven unemployed samurai to help them defend themselves.'
+    },
+    {
+        _id: 'm117',
+        title: 'The Silence of the Lambs',
+        director: 'Jonathan Demme',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg',
+        runningTime: 118,
+        releaseYear: 1991,
+        actors: ['Jodie Foster', 'Anthony Hopkins', 'Lawrence A. Bonney'],
+        genre: 'Crime',
+        plot: 'A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.'
+    },
+    {
+        _id: 'm118',
+        title: 'Saving Private Ryan',
+        director: 'Steven Spielberg',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/1wY4psJ5NVEhCuOYROwLH2XExh1.jpg',
+        runningTime: 169,
+        releaseYear: 1998,
+        actors: ['Tom Hanks', 'Matt Damon', 'Tom Sizemore'],
+        genre: 'War',
+        plot: 'Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.'
+    },
+    {
+        _id: 'm119',
+        title: 'Life Is Beautiful',
+        director: 'Roberto Benigni',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/6tEJnqFZLMUbWDbPA30JLkS5Xuv.jpg',
+        runningTime: 116,
+        releaseYear: 1997,
+        actors: ['Roberto Benigni', 'Nicoletta Braschi', 'Giorgio Cantarini'],
+        genre: 'Comedy',
+        plot: 'When an open-minded Jewish librarian and his son become victims of the Holocaust, he uses a perfect mixture of will, humor, and imagination to protect his son from the dangers around their camp.'
+    },
+    {
+        _id: 'm120',
+        title: 'The Shawshank Redemption',
+        director: 'Frank Darabont',
+        posterUrl: 'https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg',
+        runningTime: 142,
+        releaseYear: 1994,
+        actors: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
+        genre: 'Drama',
+        plot: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.'
+    }
 ]

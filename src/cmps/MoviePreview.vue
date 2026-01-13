@@ -8,9 +8,9 @@
             <p class="year">Year: {{ movie.releaseYear }}</p>
 
             <div class="actions">
-                <button @click="onDetails">Details</button>
-                <button @click="onEdit">Edit</button>
-                <button @click="onRemove" class="danger">Delete</button>
+                <button class="btn" @click="onDetails">Details</button>
+                <button class="btn" @click="onEdit">Edit</button>
+                <button class="btn danger" @click="onRemove">Delete</button>
             </div>
         </div>
     </article>
@@ -45,6 +45,7 @@ export default {
 
 <style scoped>
 .movie-preview {
+    height: 100%;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
@@ -73,6 +74,19 @@ export default {
 .content {
     padding: 10px;
     text-align: center;
+}
+
+.content h3 {
+    margin: 0 0 10px 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    min-height: 2.4em;
+    line-height: 1.2em;
 }
 
 .year {

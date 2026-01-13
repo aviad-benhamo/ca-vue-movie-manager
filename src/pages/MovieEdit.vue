@@ -156,4 +156,24 @@ button {
 button[type="button"] {
     background-color: #ccc;
 }
+
+.input-group {
+    display: flex;
+    gap: 5px;
+}
+
+.poster-preview {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.poster-preview img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 </style>

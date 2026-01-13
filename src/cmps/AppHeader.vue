@@ -1,7 +1,9 @@
 <template>
     <header class="app-header">
         <div class="header-container">
-            <h1 class="logo">🎬 MovieTime</h1>
+            <h1 class="logo">
+                <RouterLink to="/movie">🎬 MovieTime</RouterLink>
+            </h1>
             <nav>
                 <RouterLink to="/" class="nav-link">Home</RouterLink>
                 <RouterLink to="/movie" class="nav-link">Movies</RouterLink>
@@ -26,10 +28,14 @@
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo a {
+    text-decoration: none;
     color: #42b983;
+    transition: 0.3s;
+}
+
+.logo a:hover {
+    color: #3aa876;
 }
 
 .nav-link {

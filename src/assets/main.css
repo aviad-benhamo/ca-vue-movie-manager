@@ -14,11 +14,11 @@
 }
 
 .btn {
-    padding: 8px 16px;
+    padding: 5px 10px;
     cursor: pointer;
     border: none;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: 0.2s;
 }
 
