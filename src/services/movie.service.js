@@ -49,13 +49,13 @@ async function save(movie) {
 
 function getEmptyMovie() {
     return {
-        title: '', // Movie title
-        director: '', // Director's name
-        posterUrl: '', // URL to the movie poster image
-        runningTime: 90, // Running time in minutes
-        releaseYear: 1999, // Year of release
-        actors: [], // Array of actor names
-        genre: '', // Genre of the movie
+        title: 'New Movie',
+        director: '',
+        posterUrl: '',
+        runningTime: 100,
+        releaseYear: new Date().getFullYear(),
+        actors: [],
+        genre: 'General',
     }
 }
 

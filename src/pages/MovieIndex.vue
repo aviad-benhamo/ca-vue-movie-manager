@@ -1,8 +1,9 @@
 <template>
     <section class="movie-index">
         <h2>Movies List</h2>
-        <MovieList v-if="movies.length" :movies="movies" @remove="removeMovie" />
+        <button @click="onAddMovie" class="primary-btn">Add Movie</button>
     </section>
+    <MovieList v-if="movies.length" :movies="movies" @remove="removeMovie" />
 </template>
 
 <script>
@@ -37,6 +38,9 @@ export default {
             } catch (err) {
                 console.log('Cannot remove movie', err)
             }
+        },
+        onAddMovie() {
+            this.$router.push('/movie/edit')
         }
     },
     components: {
@@ -45,8 +49,30 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .movie-index {
     padding: 20px;
 }
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.primary-btn {
+    background-color: #42b983;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.primary-btn:hover {
+    background-color: #3aa876;
+}
 </style>
+מה עשינו?

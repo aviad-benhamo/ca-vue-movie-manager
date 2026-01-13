@@ -9,6 +9,7 @@
 
             <div class="actions">
                 <button @click="onDetails">Details</button>
+                <button @click="onEdit">Edit</button>
                 <button @click="onRemove" class="danger">Delete</button>
             </div>
         </div>
@@ -33,8 +34,10 @@ export default {
             this.$emit('remove', this.movie._id)
         },
         onDetails() {
-            // ניווט לפרטים (נצטרך לטפל בזה בהמשך)
             this.$router.push(`/movie/${this.movie._id}`)
+        },
+        onEdit() {
+            this.$router.push(`/movie/edit/${this.movie._id}`)
         }
     }
 }
