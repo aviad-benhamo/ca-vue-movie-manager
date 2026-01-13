@@ -61,7 +61,7 @@ function getEmptyMovie() {
 }
 
 async function getMoviePoster(title) {
-    const API_KEY = 'c286babf'
+    const API_KEY = '6e80baf1' // Demo API key, please use your own for production
 
     const res = await fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=${API_KEY}`)
     const data = await res.json()

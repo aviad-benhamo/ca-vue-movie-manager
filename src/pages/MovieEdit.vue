@@ -28,8 +28,14 @@
             </div>
 
             <div class="form-control">
-                <label for="posterUrl">Poster URL:</label>
-                <input v-model="movieToEdit.posterUrl" type="text" id="posterUrl">
+                <label for="poster">Poster URL:</label>
+                <div class="input-group">
+                    <input v-model="movieToEdit.posterUrl" type="text" id="poster">
+                    <button type="button" @click="onGetPoster" class="secondary-btn">Get Poster</button>
+                </div>
+            </div>
+            <div v-if="movieToEdit.posterUrl" class="poster-preview">
+                <img :src="movieToEdit.posterUrl" alt="Poster Preview">
             </div>
 
             <div class="actions">
@@ -75,6 +81,16 @@ export default {
                 this.$router.push('/movie')
             } catch (err) {
                 console.log('Cannot save movie', err)
+            }
+        },
+        async onGetPoster() {
+            if (!this.movieToEdit.title) return // Need a title to search
+
+            try {
+                const posterUrl = await movieService.getMoviePoster(this.movieToEdit.title)
+                this.movieToEdit.posterUrl = posterUrl
+            } catch (err) {
+                console.log('Cannot get poster', err)
             }
         },
         onCancel() {
