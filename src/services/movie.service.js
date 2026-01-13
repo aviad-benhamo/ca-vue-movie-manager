@@ -14,6 +14,7 @@ export const movieService = {
     save,
     getEmptyMovie,
     getMoviePoster,
+    getDefaultFilter,
 }
 
 async function query(filterBy = {}) {
@@ -77,4 +78,8 @@ function _createMovies() {
     if (movies && movies.length) return
 
     saveToStorage(KEY, demoData)
+}
+
+function getDefaultFilter() {
+    return { txt: '', maxRunTime: 200 }
 }

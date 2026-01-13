@@ -1,28 +1,36 @@
 <template>
     <section class="movie-index">
-        <h2>Movies List</h2>
-        <button @click="onAddMovie" class="primary-btn">Add Movie</button>
+        <div class="header-actions">
+            <h2>Movies List</h2>
+            <button @click="onAddMovie" class="primary-btn">Add Movie</button>
+        </div>
+
+        <MovieFilter @filter="setFilter" />
+
+        <MovieList v-if="movies.length" :movies="movies" @remove="removeMovie" />
     </section>
-    <MovieList v-if="movies.length" :movies="movies" @remove="removeMovie" />
 </template>
 
 <script>
 import { movieService } from '@/services/movie.service.js'
 import MovieList from '@/cmps/MovieList.vue'
+import MovieFilter from '@/cmps/MovieFilter.vue'
 
 export default {
     data() {
         return {
-            movies: []
+            movies: [],
+            filterBy: {},
         }
     },
     async created() {
+        this.filterBy = movieService.getDefaultFilter()
         this.loadMovies()
     },
     methods: {
         async loadMovies() {
             try {
-                this.movies = await movieService.query()
+                this.movies = await movieService.query(this.filterBy)
             } catch (err) {
                 console.log('Cannot load movies', err)
             }
@@ -41,10 +49,15 @@ export default {
         },
         onAddMovie() {
             this.$router.push('/movie/edit')
+        },
+        setFilter(filterBy) {
+            this.filterBy = filterBy
+            this.loadMovies()
         }
     },
     components: {
-        MovieList
+        MovieList,
+        MovieFilter
     }
 }
 </script>
@@ -75,4 +88,3 @@ export default {
     background-color: #3aa876;
 }
 </style>
-מה עשינו?
