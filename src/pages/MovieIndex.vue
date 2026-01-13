@@ -15,6 +15,7 @@
 import { movieService } from '@/services/movie.service.js'
 import MovieList from '@/cmps/MovieList.vue'
 import MovieFilter from '@/cmps/MovieFilter.vue'
+import { showSuccessMsg, showErrorMsg } from '@/services/event-bus.service.js'
 
 export default {
     data() {
@@ -41,9 +42,10 @@ export default {
 
                 const idx = this.movies.findIndex(movie => movie._id === movieId)
                 this.movies.splice(idx, 1)
-
+                showSuccessMsg('Movie removed successfully!')
                 console.log('Movie removed!')
             } catch (err) {
+                showErrorMsg('Failed to remove movie')
                 console.log('Cannot remove movie', err)
             }
         },

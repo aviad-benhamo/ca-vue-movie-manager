@@ -48,7 +48,7 @@
 
 <script>
 import { movieService } from '@/services/movie.service.js'
-
+import { showSuccessMsg, showErrorMsg } from '@/services/event-bus.service.js'
 export default {
     data() {
         return {
@@ -77,10 +77,12 @@ export default {
         async saveMovie() {
             try {
                 await movieService.save(this.movieToEdit)
+                showSuccessMsg('Movie saved successfully!')
                 // after saving, navigate back to movie list
                 this.$router.push('/movie')
             } catch (err) {
                 console.log('Cannot save movie', err)
+                showErrorMsg('Failed to save movie')
             }
         },
         async onGetPoster() {
@@ -91,6 +93,7 @@ export default {
                 this.movieToEdit.posterUrl = posterUrl
             } catch (err) {
                 console.log('Cannot get poster', err)
+                showErrorMsg('Failed to get poster')
             }
         },
         onCancel() {
