@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Rewrote `README.md` to adhere to the GitHub Repository Standard (GRS) layout and documented project setup, configuration, features, and screenshots.
+- Added GitHub Actions deployment workflow `.github/workflows/deploy.yml` for automated GitHub Pages hosting.
 
 ### Changed
 - Configured Vite `base` path in `vite.config.js` to `/ca-vue-movie-manager/` to support subpath hosting on GitHub Pages.
