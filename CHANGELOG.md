@@ -7,17 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-07-06
+
 ### Added
 - Rewrote `README.md` to adhere to the GitHub Repository Standard (GRS) layout and documented project setup, configuration, features, and screenshots.
 - Added GitHub Actions deployment workflow `.github/workflows/deploy.yml` for automated GitHub Pages hosting.
 - Added Live Demo links to `README.md`.
-
-### Changed
-- Configured Vite `base` path in `vite.config.js` to `/ca-vue-movie-manager/` to support subpath hosting on GitHub Pages.
-
-## [0.1.0] - 2026-07-06
-
-### Added
 - Created `SECURITY.md` with vulnerability reporting policy.
 - Created `.env.example` as a template for local environment configuration.
 - Created `LICENSE` file with MIT license.
@@ -27,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added application screenshots to `assets/screenshots/` (`movie-list.png`, `movie-edit.png`) to document the UI.
 
 ### Changed
+- Configured Vite `base` path in `vite.config.js` to `/ca-vue-movie-manager/` to support subpath hosting on GitHub Pages.
 - Replaced hardcoded OMDB API key with `import.meta.env.VITE_OMDB_API_KEY` in `src/services/movie.service.js`.
 - Updated `.gitignore` to explicitly ignore local `.env` configuration files.
 - Moved `vuejs-movie-manager-exercise.md` to `docs/exercise.md` to clean up the repository root.
