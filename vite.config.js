@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/ca-vue-movie-manager/',
   plugins: [
     vue(),
     vueDevTools(),
