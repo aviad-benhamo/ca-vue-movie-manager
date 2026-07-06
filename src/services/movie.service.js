@@ -61,14 +61,28 @@ function getEmptyMovie() {
 }
 
 async function getMoviePoster(title) {
-    const API_KEY = '6e80baf1' // Demo API key, please use your own for production
+    const API_KEY = import.meta.env.VITE_OMDB_API_KEY
 
-    const res = await fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=${API_KEY}`)
-    const data = await res.json()
+    if (!API_KEY) {
+        console.warn('OMDB API key is missing. Please set VITE_OMDB_API_KEY in your local environment (.env).')
+        return '../../default.png'
+    }
 
-    if (data.Response === 'True') {
-        return data.Poster // Use this in your UI
-    } else {
+    try {
+        const res = await fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=${API_KEY}`)
+        if (!res.ok) {
+            throw new Error(`OMDB API fetch returned status: ${res.status}`)
+        }
+        const data = await res.json()
+
+        if (data.Response === 'True') {
+            return data.Poster
+        } else {
+            console.warn(`OMDB API warning for movie "${title}":`, data.Error)
+            return '../../default.png'
+        }
+    } catch (err) {
+        console.error('Failed to fetch movie poster:', err)
         return '../../default.png'
     }
 }
