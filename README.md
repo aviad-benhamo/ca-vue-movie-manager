@@ -5,6 +5,8 @@
 [![Vue Version](https://img.shields.io/badge/Vue-3.5.26-4fc08d.svg?logo=vue.js)](package.json)
 [![Vite Version](https://img.shields.io/badge/Vite-7.3.0-646cff.svg?logo=vite)](package.json)
 
+**Live Demo:** [https://aviad-benhamo.github.io/ca-vue-movie-manager/](https://aviad-benhamo.github.io/ca-vue-movie-manager/)
+
 ## Project Status
 This repository is an **Experimental / Coding Academy** project designed to practice building frontend CRUD applications using Vue 3 and Vite. It has been aligned with the GitHub Repository Standard (GRS) for proper repository health, structure, and documentation.
 
@@ -20,6 +22,8 @@ VueJS Movie Manager is a single-page application (SPA) that lets users manage th
 - **Sleek Responsive Styling**: Clean layout utilizing Vanilla CSS with hover scaling effects and cohesive design system elements.
 
 ## Screenshots / Demo
+
+[🔗 Explore the Live Demo](https://aviad-benhamo.github.io/ca-vue-movie-manager/)
 
 ### Movie Catalog (List View)
 ![Movie List Page](assets/screenshots/movie-list.png)
