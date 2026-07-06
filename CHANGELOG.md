@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Rewrote `README.md` to adhere to the GitHub Repository Standard (GRS) layout and documented project setup, configuration, features, and screenshots.
+
 ## [0.1.0] - 2026-07-06
 
 ### Added
