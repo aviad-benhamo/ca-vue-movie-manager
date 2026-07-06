@@ -18,3 +18,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Replaced hardcoded OMDB API key with `import.meta.env.VITE_OMDB_API_KEY` in `src/services/movie.service.js`.
 - Updated `.gitignore` to explicitly ignore local `.env` configuration files.
+- Moved `vuejs-movie-manager-exercise.md` to `docs/exercise.md` to clean up the repository root.
